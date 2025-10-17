@@ -11835,3 +11835,34 @@ figure {
     padding-right: 0;
   }
 }
+
+.success-ticker-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.success-ticker-flex {
+  display: flex;
+  width: max-content; /* Allow flex items to extend */
+  animation: scrollTicker 20s linear infinite; /* Continuous scroll */
+}
+
+.success-ticker-item {
+  display: flex;
+  margin-right: 50px; /* spacing between duplicates */
+}
+
+@keyframes scrollTicker {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%); /* scroll half width for duplicate effect */
+  }
+}
+
+/* Optional: duplicate the items so scroll looks seamless */
+.success-ticker-flex .success-ticker-item:first-child {
+  margin-right: 50px;
+}
+
