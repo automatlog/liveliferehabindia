@@ -11866,3 +11866,6 @@ figure {
   margin-right: 50px;
 }
 
+.w-webflow-badge {
+display: none !important;
+}
